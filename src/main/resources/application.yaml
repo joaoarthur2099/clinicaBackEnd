@@ -1,0 +1,30 @@
+server:
+  port: 8000
+  servlet:
+    context-path: /clinica/api
+security:
+  jwt:
+    issuer: clinica
+    secret: eaebao202
+    expiration-in-hours: 2
+    time-zone: -03:00
+springdoc:
+  api-docs:
+    path: /docs
+    pathsToMatch: /api/**
+  swagger-ui:
+    use-root-path: true
+spring:
+  application:
+    name: Clinica
+  datasource:
+    url: jdbc:postgresql://localhost:5432/clinicamedica
+    username: postgres
+    password: senhaconfiavelconfia
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  flyway:
+    enabled: false
+    baselineOnMigrate: true
